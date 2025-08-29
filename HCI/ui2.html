@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Preferences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            color: #4F46E5;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        /* Toggle switch styles same as main settings page */
+        .toggle-checkbox:checked {
+            transform: translateX(100%);
+            background-color: #4F46E5;
+            border-color: #4F46E5;
+        }
+        .toggle-checkbox {
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+            appearance: none;
+            width: 2.5rem;
+            height: 1.5rem;
+            border-radius: 9999px;
+            background-color: #E5E7EB;
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+        }
+        .toggle-checkbox::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 1rem;
+            height: 1rem;
+            background-color: white;
+            border-radius: 9999px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .toggle-checkbox:checked::before {
+             transform: translateX(1rem);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-lg mx-auto py-8 px-4">
+        
+        <a href="settings.html" class="back-button">
+            <svg class="w-5 h-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+            Back to Settings
+        </a>
+        
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">Study Preferences</h1>
+
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">Planner Settings</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Daily Study Goal</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        <option>30 minutes</option>
+                        <option selected>1 hour</option>
+                        <option>2 hours</option>
+                        <option>3 hours</option>
+                        <option>4+ hours</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Study Days</label>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-md">Mon</button>
+                        <button class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-md">Tue</button>
+                        <button class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-md">Wed</button>
+                        <button class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-md">Thu</button>
+                        <button class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-md">Fri</button>
+                        <button class="px-3 py-1 bg-gray-100 text-gray-700 rounded-md">Sat</button>
+                        <button class="px-3 py-1 bg-gray-100 text-gray-700 rounded-md">Sun</button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between pt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Auto-generate Study Plan</label>
+                        <p class="text-sm text-gray-500">Create a weekly plan based on your goals</p>
+                    </div>
+                    <input type="checkbox" class="toggle-checkbox" checked>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">Pomodoro Timer</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Focus Duration</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        <option>15 minutes</option>
+                        <option>20 minutes</option>
+                        <option selected>25 minutes</option>
+                        <option>30 minutes</option>
+                        <option>45 minutes</option>
+                        <option>60 minutes</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Short Break Duration</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        <option>3 minutes</option>
+                        <option selected>5 minutes</option>
+                        <option>10 minutes</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Long Break Duration</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        <option>10 minutes</option>
+                        <option selected>15 minutes</option>
+                        <option>20 minutes</option>
+                        <option>30 minutes</option>
+                    </select>
+                </div>
+                <div class="flex items-center justify-between pt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Auto-start Breaks</label>
+                        <p class="text-sm text-gray-500">Timer automatically starts the break period</p>
+                    </div>
+                    <input type="checkbox" class="toggle-checkbox">
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">Content & Progress</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Reset Mock Exam Scores</label>
+                        <p class="text-sm text-gray-500">Clear all your practice test results</p>
+                    </div>
+                    <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Reset</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Reset Study Progress</label>
+                        <p class="text-sm text-gray-500">Clear all your completed lessons and progress</p>
+                    </div>
+                    <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Reset</button>
+                </div>
+                <div class="pt-4 border-t border-gray-200">
+                    <button class="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                        Reset All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

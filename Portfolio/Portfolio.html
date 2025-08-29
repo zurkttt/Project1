@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar-header">
+                    <a href="Portfolio.html" class="navbar-brand p-3">Portfolio</a>
+            </div>
+            <div id="navbarNav">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item col-6"><a href="Portfolio.html" class="nav-link active text-white text-decoration-none">Home</a></li>
+                    <li class="nav-item col-6"><a href="reflection.html" class="nav-link text-white text-decoration-none">Reflection</a></li>
+                </ul>
+            </div>
+    </nav>
+    <div class="col-3 mx-auto my-3 p-2 text-center alert alert-info"><strong> Welcome to my Portofolio!</strong></div>
+    <div class="card mx-auto col-6 border-3 border-dark">
+        <img src="profile.jpg" alt="Profile Picture" class="col-4 mx-auto rounded-circle border border-dark mt-5">
+        <div class="card-body">
+            <h3 class="text-center"><strong>Thristan Kurt M. Cabinta</strong></h3>
+            <br>
+            <h4><strong>Personal Information</strong></h4>
+            <h5 class="mx-5"><strong>Address: </strong>Sta. Barbara, Pangasinan</h5>
+            <h5 class="mx-5"><strong>Contact Number: </strong>+63 992 736 1341</h5>
+            <h5 class="mx-5"><strong>Email: </strong>thristankurt15@gmail.com</h5>
+            <h5 class="mx-5"><strong>Date of Birth: </strong>March 4, 2005</h5>
+            <br>
+            <h4><strong>School Attended</strong></h4>
+            <h5 class="mx-5"><strong>Primary: </strong>Sta. Barbara Central School</h5>
+            <h5 class="mx-5"><strong>Secondary: </strong>Daniel Maramba National High School</h5>
+            <h5 class="mx-5"><strong>Tertiary: </strong>Pangasinan State University</h5>
+            <br>
+            <h4><strong>Hobby</strong></h4>
+            <h5 class="mx-5">I enjoy spending my free time watching K-dramas and anime, getting lost in their unique stories and characters. I'm also a big fan of reading manhwa—it's my go-to when I want to relax and dive into different worlds filled with action, romance, and fantasy.</h5>
+            <br><br>
+            <h4 class="text-center"><strong>"Mistakes are proof that you are trying"</strong></h4>
+        </div>
+        
+    </div>
+    <br><br>
+<div class="text-center">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Contact Me
+  </button>
+  <br><br>
+</div>
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Send a message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="contactName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="contactName" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+      <div class="container text-center">
+        <a href="https://www.facebook.com/zurkttt" class="p-2"> <i class="bi bi-facebook fs-3"></i></a>
+        <a href="https://www.instagram.com/zurkttt" class="p-2"> <i class="bi bi-instagram fs-3"></i></a>
+        <a href="https://www.t.me/zurkttt" class="p-2"> <i class="bi bi-telegram fs-3"></i></a>
+        <p class="text-center">Copyright <i class="bi bi-c-circle"></i> 2025 Thristan Kurt Cabinta</p>
+        <br><br><br>
+    
+      </div>
+</body>
+</html>

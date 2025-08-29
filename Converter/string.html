@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" onkeyup="square()" id="n" />
+    <div id="result"></div>
+    <input type="text" id="t" />
+    <input type="submit" onclick="reverseString(); isPalindrome(); capitalize()" id="b">
+    <div id="resulttext1"></div>
+    <div id="resulttext2"></div><div id="resulttext3"></div>
+    <script>
+     
+      function reverseString(){
+        let text = document.getElementById("t").value;
+        let reverse = text.split("").reverse().join("");
+        console.log(text.split("").reverse().join(""));
+        document.getElementById("resulttext1").innerHTML = reverse;
+      }
+      function isPalindrome(){
+        let text = document.getElementById("t").value;
+        let reversed = text.split("").reverse().join("");
+        let output = (text === reversed);
+        console.log(output);
+        document.getElementById("resulttext2").innerHTML = output;
+      }
+      function capitalize(){
+        let input = document.getElementById("t").value;
+        let capitalize = input.charAt(0).toUpperCase() + input.slice(1);
+        document.getElementById("resulttext3").innerHTML = capitalize;
+    }
+
+    let str1 = "this is a string using double's qoute";
+      let str2 = 'this is a string using single" quote';
+      let fname = "     rhenel    ";
+      let str3 = `this a string using backtick. You can use single qoute ('), double qoute (") and display variables like ${fname}`;
+
+      let i = str2.indexOf("x");
+      if (i == -1) {
+        console.log("not found");
+      } else {
+        console.log(i);
+      }
+      console.log(str3);
+      console.log(fname.toUpperCase());
+      let words = str3.split(" ");
+      console.log(words);
+      let chars = fname.trim().split("");
+      console.log(chars);
+
+      function square() {
+        let a = document.getElementById("n").value;
+        str = "";
+        for (let c = 0; c < a; c++) {
+          for (let r = 0; r < c; r++) {
+            str += "*";
+          }
+          str += "<br>";
+        }
+        document.getElementById("result").innerHTML = str;
+    }
+
+      let text = "Thristan Kurt M";
+      let text1 = "Cabinta";
+      let text2 = "    Kurto   ";
+      let length = text.length;
+      console.log(text.length);
+      console.log(text.charAt(1));
+      console.log(text.charCodeAt(1));
+      console.log(text.at(1));
+      console.log(text.slice(-8));
+
+      console.log(text.substring(-8));
+
+      console.log(text.toUpperCase(1));
+
+      console.log(text.concat(" ", text1));
+
+      console.log(text2.trim());
+
+      console.log(text2.trimStart());
+      console.log(text2.trimEnd());
+      console.log(text.repeat(3));
+
+      console.log(text.split(" "));
+    </script>
+  </body>
+</html>
+string.html
+Displaying string.html. 
