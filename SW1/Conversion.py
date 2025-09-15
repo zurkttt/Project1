@@ -1,4 +1,8 @@
-dollar = [59,200,500]
+numrep = int(input("Enter how many number you will convert: "))
+dollar = []
+for x in range(numrep):
+    num = float(input("Enter currency in $: "))
+    dollar.append(num)
 
 
 def dollartophp(num):
@@ -14,4 +18,4 @@ def dollartoyen(num):
 
 print("Dollar($)        Phil Peso(P)          Jpn Yen(Y)")
 for x in dollar:
-    print(f"{x:<10}        {dollartophp(x):.2f}              {dollartoyen(x):.2f}")
+    print(f"{x}                {dollartophp(x):.2f}              {dollartoyen(x):.2f}")
