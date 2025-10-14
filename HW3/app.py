@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/input')
 def input():
-    return render_template('index.html')  # your registration form
+    return render_template('index.html')
 
 @app.route('/process', methods=['POST'])
 def output():
@@ -14,7 +14,6 @@ def output():
     institution = request.form['Institution']
     email = request.form['email']
 
-    # You can pass the values to result.html
     return render_template(
         'result.html',
         last_name=last_name,
