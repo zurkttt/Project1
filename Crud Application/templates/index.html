@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='boostrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='dataTables.min.js')}}">
+</head>
+<body>
+        <div class="col-sm-8 mx-auto">
+            <table id="StudentTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Sex</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{row['student_id']}}</td>
+                        <td>{{row['studName']}}</td>
+                        <td>{{row['studSex']}}</td>
+                        <td>{{row['studDept']}}</td>
+                        <td><a href="{{url_for('edit',student_id=row[student_id])}}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{url_for(delete',student_id=row[student_id])}}" class="btn btn-sm btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="{{url_for('static', filename='jquery.js')}}"></script>
+        <script src="{{url_for('static', filename='bootstrap.min.css')}}"></script>
+        <script src="{{url_for('static', filename='DataTables.min.js')}}"></script>
+        <script src="{{url_for('static', filename='dataTables.dataTables.min.css)}}"></script>
+        <script>
+            $(document).ready(function(){
+                $('#studentTable').DataTable();
+            })
+        </script>
+</body>
+</html>

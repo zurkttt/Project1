@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Student</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+  <div class="container">
+    <div class="d-flex align-items-center mb-3">
+      <a href="/" class="btn btn-link">&larr; Back</a>
+      <h3 class="ms-2">Edit Student</h3>
+    </div>
+
+    <form action="/update" method="POST" class="card p-3 bg-white">
+      <input type="hidden" name="student_id" value="{{ student.student_id }}">
+
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" value="{{ student.name }}" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sex</label>
+        <input type="text" name="sex" class="form-control" value="{{ student.sex }}" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Department</label>
+        <input type="text" name="department" class="form-control" value="{{ student.department }}" required>
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <a href="/" class="btn btn-secondary me-2">Cancel</a>
+        <button class="btn btn-primary" type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+
+    <script src="{{url_for('static', filename='bootstrap.min.css')}}"></script>
+</body>
+</html>
